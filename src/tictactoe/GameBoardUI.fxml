@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="gameScene" prefHeight="913.0" prefWidth="1236.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.GameBoardController">
+   <children>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="1250.0" text="Tic Tac Toe">
+         <font>
+            <Font name="Candara Bold" size="55.0" />
+         </font>
+      </Label>
+      <GridPane hgap="15.0" layoutX="14.0" layoutY="112.0" prefHeight="748.0" prefWidth="750.0" vgap="15.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="40.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" prefHeight="255.0" prefWidth="239.0" style="-fx-background-color: white;" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Button fx:id="button9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#humanPlayerMove" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="120.0" />
+               </font></Button>
+            <Line fx:id="horizontalWinLine_1" endX="100.0" startX="-650.0" strokeWidth="6.0" visible="false" />
+            <Line fx:id="horizontalWinLine_2" endX="100.0" startX="-650.0" strokeWidth="6.0" visible="false" GridPane.rowIndex="1" />
+            <Line fx:id="horizontalWinLine_3" endX="100.0" startX="-650.0" strokeWidth="6.0" visible="false" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Line endX="1119.0" layoutX="116.0" layoutY="108.0" startX="-100.0" strokeMiterLimit="0.0" strokeWidth="4.0" />
+      <Line endX="1120.0" layoutX="115.0" layoutY="899.0" startX="-100.0" strokeWidth="4.0" />
+      <Line endX="-100.0" endY="790.0" layoutX="115.0" layoutY="108.0" startX="-100.0" strokeWidth="4.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Line>
+      <Line endX="100.0" endY="790.0" layoutX="1135.0" layoutY="109.0" startX="100.0" strokeWidth="4.0" />
+      <Line endX="-90.0" endY="790.0" layoutX="905.0" layoutY="106.0" startX="-90.0" startY="5.0" strokeWidth="4.0" />
+      <Line fx:id="verticalLine1" endX="-100.0" endY="765.0" layoutX="388.0" layoutY="123.0" startX="-100.0" startY="20.0" strokeWidth="7.0" />
+      <Line fx:id="verticalLine2" endX="-100.0" endY="770.0" layoutX="642.0" layoutY="119.0" startX="-100.0" startY="25.0" strokeWidth="7.0" />
+      <Line fx:id="horizontalLine1" endX="-850.0" endY="10.0" layoutX="891.0" layoutY="378.0" startX="-100.0" startY="10.0" strokeWidth="7.0" />
+      <Line fx:id="horizontalLine2" endX="-855.0" endY="10.0" layoutX="893.0" layoutY="633.0" startX="-105.0" startY="10.0" strokeWidth="7.0" />
+      <Label layoutX="890.0" layoutY="159.0" text="THEME">
+         <font>
+            <Font name="Candara Bold" size="50.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="classic" layoutX="899.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#setTheme" selected="true" text="Classic">
+         <font>
+            <Font name="Candara" size="30.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="themeGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="forrest" layoutX="899.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#setTheme" text="Forrest" toggleGroup="$themeGroup">
+         <font>
+            <Font name="Candara" size="30.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="highContrast" layoutX="899.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#setTheme" text="High Contrast" toggleGroup="$themeGroup">
+         <font>
+            <Font name="Candara" size="30.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="randomAI" layoutX="843.0" layoutY="584.0" mnemonicParsing="false" onMouseClicked="#playWithAI" prefHeight="31.0" prefWidth="362.0" style="-fx-background-color: black;" text="Start with Random AI" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="defensiveAI" layoutX="843.0" layoutY="665.0" mnemonicParsing="false" onMouseClicked="#playWithAI" prefHeight="31.0" prefWidth="362.0" style="-fx-background-color: black;" text="Start with Defensive AI" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line fx:id="verticalWinLine_1" endX="-95.0" endY="760.0" layoutX="258.0" layoutY="122.0" startX="-95.0" strokeWidth="6.0" visible="false" />
+      <Line fx:id="verticalWinLine_2" endX="-100.0" endY="760.0" layoutX="517.0" layoutY="122.0" startX="-100.0" strokeWidth="6.0" visible="false" />
+      <Line fx:id="verticalWinLine_3" endX="-100.0" endY="760.0" layoutX="771.0" layoutY="122.0" startX="-100.0" strokeWidth="6.0" visible="false" />
+      <Line fx:id="diagonalWinLine_1" endX="620.0" endY="740.0" layoutX="147.0" layoutY="122.0" startX="-100.0" startY="20.0" strokeWidth="6.0" visible="false" />
+      <Line fx:id="diagonalWinLine_2" endX="115.0" layoutX="694.0" layoutY="122.0" startX="-650.0" startY="760.0" strokeWidth="6.0" visible="false" />
+   </children>
+</AnchorPane>
