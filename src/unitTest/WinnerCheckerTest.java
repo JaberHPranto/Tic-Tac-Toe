@@ -6,6 +6,7 @@ import tictactoe.GameManager;
 public class WinnerCheckerTest {
 
     GameManager gameManager=new GameManager();
+    // ignore 1st position of boardPosition Array.Haven't use 0th index
 
     // ROW WINNER TESTING
     @Test
